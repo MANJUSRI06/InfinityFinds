@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infinity Finds - Products</title>
+  <link rel="stylesheet" href="style/product.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Background Image -->
+  <img src="assets/background.jpg" alt="Background" class="background-img" />
+
+  <!-- Navbar (updated to match home page) -->
+  <nav class="navbar">
+    <div class="logo-box">
+      <img src="assets/logo.jpeg" alt="Infinity Finds Logo" />
+      <span>Infinity Finds</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="product.html" class="active">Products</a></li>
+      <li><a href="#" class="restricted">Wishlist</a></li>
+      <li><a href="#" class="restricted">Add to Cart</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="index.html">Login</a></li>
+      <li><a href="signup.html">Signup</a></li>
+    </ul>
+  </nav>
+
+  <!-- Title and Description -->
+  <section class="product-hero" style="text-align:center; padding:50px 0 20px 0; background:#fff2f6;">
+    <h1 style="font-size:2.3rem; color:#f14872; margin-bottom:10px; letter-spacing:1px;">Our Products</h1>
+    <p style="font-size:1.15rem; color:#555;">Discover unique, handcrafted accessories and gifts made just for you!</p>
+  </section>
+
+  <!-- ✅ Category Cards Only -->
+  <section class="category-section">
+    <div class="category-card" onclick="location.href='bracelets.html'">
+      <img src="assets/bracelet card.avif" alt="Bracelets" />
+      <h3>Bracelets</h3>
+      <p>Explore our collection of handmade beaded bracelets crafted with love.</p>
+      <button>View Bracelets</button>
+    </div>
+
+    <div class="category-card" onclick="location.href='polaroids.html'">
+      <img src="assets/polaroid card.avif" alt="Polaroids" />
+      <h3>Polaroids</h3>
+      <p>Shop aesthetic polaroids perfect for gifts, journaling, or decor.</p>
+      <button>View Polaroids</button>
+    </div>
+  </section>
+
+  <script>
+    // Simulated login check
+    const isLoggedIn = sessionStorage.getItem("loggedIn") === "true";
+    document.querySelectorAll('.restricted').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (!isLoggedIn) {
+          e.preventDefault();
+          alert("Please log in to access this feature.");
+        }
+      });
+    });
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-open');
+      navToggle.classList.toggle('open');
+    });
+    // Close nav on link click (for mobile UX)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('nav-open');
+        navToggle.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infinity Finds - Home</title>
+  <link rel="stylesheet" href="style/home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Image -->
+  <img src="assets/background.jpg" alt="Background" class="background-img" />
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-box">
+      <img src="assets/logo.jpeg" alt="Infinity Finds Logo" />
+      <span>Infinity Finds</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="product.html" class="restricted">Products</a></li>
+      <li><a href="#" class="restricted">Wishlist</a></li>
+      <li><a href="#" class="restricted">Add to Cart</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="index.html">Login</a></li>
+      <li><a href="signup.html">Signup</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Infinity Finds !!</h1>
+    <p>Explore our collection of handmade accessories, unique gifts, and more.</p>
+  </section>
+
+  <!-- Image Slider -->
+  <section class="slider-container">
+    <div class="slider-track" id="sliderTrack">
+      <img src="assets/bracelet1.jpg" alt="Bracelet" />
+      <img src="assets/pola1.jpg" alt="Polaroid" />
+      <img src="assets/bracelet2.jpg" alt="Bracelet 2" />
+      <img src="assets/pola2.jpg" alt="Polaroid 2" />
+      <img src="assets/bracelet3.jpg" alt="Bracelet 3" />
+      <img src="assets/pola 3.avif" alt="Polaroid 2" />
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <h2 style="text-align:center; font-size:2.2rem; color:#f14872; margin-bottom: 10px; letter-spacing:1px;">Why Choose Us?</h2>
+    <p style="text-align:center; font-size:1.1rem; color:#555; margin-bottom: 30px;">We are passionate about delivering unique, quality, and memorable products to you!</p>
+    <div class="features" style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
+      <div class="feature-card" style="background:#fff8fc; border-radius:18px; box-shadow:0 4px 18px rgba(241,72,114,0.08); padding:28px 22px; width:220px; text-align:center; transition:transform 0.2s;">
+        <img src="https://img.icons8.com/fluency/48/000000/handmade.png" alt="Handmade" style="margin-bottom:10px;"/>
+        <h3 style="color:#f14872; font-size:1.15rem; margin-bottom:7px;">Handmade with Love</h3>
+        <p style="color:#666; font-size:0.98rem;">Every product is crafted with care and passion by skilled artisans.</p>
+      </div>
+      <div class="feature-card" style="background:#fff8fc; border-radius:18px; box-shadow:0 4px 18px rgba(241,72,114,0.08); padding:28px 22px; width:220px; text-align:center; transition:transform 0.2s;">
+        <img src="https://img.icons8.com/fluency/48/000000/gift.png" alt="Unique Gifts" style="margin-bottom:10px;"/>
+        <h3 style="color:#f14872; font-size:1.15rem; margin-bottom:7px;">Unique Gifts</h3>
+        <p style="color:#666; font-size:0.98rem;">Find one-of-a-kind accessories and gifts you won't see anywhere else.</p>
+      </div>
+      <div class="feature-card" style="background:#fff8fc; border-radius:18px; box-shadow:0 4px 18px rgba(241,72,114,0.08); padding:28px 22px; width:220px; text-align:center; transition:transform 0.2s;">
+        <img src="https://img.icons8.com/fluency/48/000000/delivery.png" alt="Fast Delivery" style="margin-bottom:10px;"/>
+        <h3 style="color:#f14872; font-size:1.15rem; margin-bottom:7px;">Fast Delivery</h3>
+        <p style="color:#666; font-size:0.98rem;">Quick and reliable shipping to get your favorites to your doorstep fast.</p>
+      </div>
+      <div class="feature-card" style="background:#fff8fc; border-radius:18px; box-shadow:0 4px 18px rgba(241,72,114,0.08); padding:28px 22px; width:220px; text-align:center; transition:transform 0.2s;">
+        <img src="https://img.icons8.com/fluency/48/000000/lock-2.png" alt="Secure Payment" style="margin-bottom:10px;"/>
+        <h3 style="color:#f14872; font-size:1.15rem; margin-bottom:7px;">Secure Payment</h3>
+        <p style="color:#666; font-size:0.98rem;">Shop with confidence using our safe and secure payment options.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:38px;">
+      <a href="https://www.instagram.com/infinity_finds_05?utm_source=qr&igsh=bHprYjl5amczYjhz" target="_blank" style="display:inline-block;">
+        <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt="Instagram" style="vertical-align:middle; margin-right:10px; transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'"/>
+      </a>
+      <span style="font-size:1.08rem; color:#222; vertical-align:middle;">You can also order using our <a href="https://instagram.com/YOUR_INSTAGRAM_ID" target="_blank" style="color:#f14872; font-weight:600; text-decoration:none;">Instagram page</a>!</span>
+    </div>
+  </section>
+
+  <script>
+    // Simulated login check
+    const isLoggedIn = sessionStorage.getItem("loggedIn") === "true";
+    document.querySelectorAll('.restricted').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (!isLoggedIn) {
+          e.preventDefault();
+          alert("Please log in to access this feature.");
+        }
+      });
+    });
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-open');
+      navToggle.classList.toggle('open');
+    });
+    // Close nav on link click (for mobile UX)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('nav-open');
+        navToggle.classList.remove('open');
+      });
+    });
+
+    const slider = document.getElementById("sliderTrack");
+  const images = slider.querySelectorAll("img");
+  const imgWidth = 300 + 20; // width + gap
+  let index = 0;
+
+  // Clone first N images and append for seamless loop
+  const clones = [];
+  for (let i = 0; i < 3; i++) {
+    const clone = images[i].cloneNode(true);
+    slider.appendChild(clone);
+    clones.push(clone);
+  }
+
+  function slideNext() {
+    index++;
+    slider.style.transition = "transform 0.6s ease-in-out";
+    slider.style.transform = `translateX(-${index * imgWidth}px)`;
+
+    if (index === images.length) {
+      setTimeout(() => {
+        slider.style.transition = "none";
+        slider.style.transform = "translateX(0)";
+        index = 0;
+      }, 700); // wait until slide animation completes
+    }
+  }
+
+  setInterval(slideNext, 3000); 
+  </script>
+
+</body>
+</html>

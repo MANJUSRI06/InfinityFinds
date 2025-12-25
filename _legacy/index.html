@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infinity Finds - Login</title>
+  <link rel="stylesheet" href="style/index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ✅ Background Image -->
+  <img src="assets/background.jpg" alt="Background" class="background-img" />
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="logo-box">
+      <img src="assets/logo.jpeg" alt="Infinity Finds Logo" />
+      <span>Infinity Finds</span>
+    </div>
+  </nav>
+
+  <!-- ✅ Login Form -->
+<div class="container">
+  <form onsubmit="event.preventDefault(); loginUser();" class="form">
+    <h2>Login</h2>
+    <input type="text" name="username" placeholder="Username" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <button type="submit" class="submit-btn">Login</button>
+    <p class="signup-link">New user? <a href="signup.html">Sign up here</a></p>
+  </form>
+</div>
+
+<!-- ✅ Simulated login script -->
+<script>
+  function loginUser() {
+    sessionStorage.setItem("loggedIn", "true");
+    window.location.href = "home.html";
+  }
+</script>
+
+
+
+
+</body>
+</html>

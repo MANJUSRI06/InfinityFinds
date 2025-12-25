@@ -1,0 +1,81 @@
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background: #fff2f6;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #f14872;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Slider */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffdfd;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  /* transition handled in JS or via inline style */
+}
+
+.slider-track img {
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  padding: 20px;
+  background: #fffdfd;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature-card {
+  background: #fff8fc;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(241, 72, 114, 0.08);
+  padding: 28px 22px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: #f14872;
+  font-size: 1.15rem;
+  margin-bottom: 7px;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 0.98rem;
+}

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import '../styles/Home.css';
+import '../styles/home.css';
 
 const Home = () => {
     // Images for slider
